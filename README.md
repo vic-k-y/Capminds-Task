@@ -2,6 +2,8 @@
 
 A responsive web-based appointment scheduling system designed for healthcare practices. This application allows medical staff to manage patient appointments through an intuitive calendar interface and comprehensive dashboard with filtering capabilities.
 
+(Used AI to generate readme file.)
+
 ## 🎯 Features
 
 - **Calendar View**: Interactive 3-month calendar display with appointment visualization
