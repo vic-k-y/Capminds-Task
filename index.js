@@ -36,8 +36,17 @@ const modalToggle = function () {
   modal.classList.toggle("display-none");
 };
 
-modalCloseBtn.addEventListener("click", modalToggle);
-modalCancelBtn.addEventListener("click", modalToggle);
+const modalClose = function () {
+  modal.querySelector(".book-modal-form").reset();
+  currentEditUserId = null;
+  modalToggle();
+};
+// modalCloseBtn.addEventListener("click", modalToggle);
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) modalClose();
+});
+modalCloseBtn.addEventListener("click", modalClose);
+modalCancelBtn.addEventListener("click", modalClose);
 bookAppointbtn.addEventListener("click", modalToggle);
 
 // ---------- cal - dash switch
