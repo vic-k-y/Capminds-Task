@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="img/logo.png" type="image/png" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Capminds | Scheduler</title>
+  </head>
+  <body>
+    <div class="book-modal display-none">
+      <div class="book-modal-content">
+        <div class="book-modal-h2">
+          <h2>Schedule Appointment</h2>
+          <a class="modal-close-btn"><ion-icon name="close"></ion-icon></a>
+        </div>
+        <form class="book-modal-form" action="">
+          <div class="book-modal-elements">
+            <label for="patient-name"
+              ><ion-icon name="people-outline"></ion-icon
+            ></label>
+            <!-- <div class="select-wrapper"> -->
+            <input
+              type="text"
+              id="book-patient-name-input"
+              name="patient-name"
+              placeholder="Patient Name"
+              required
+            />
+          </div>
+          <div class="book-modal-elements">
+            <label for="doctor-name"
+              ><ion-icon name="people-outline"></ion-icon
+            ></label>
+            <select
+              id="book-doctor-name-input"
+              name="doctor-name"
+              title="docter"
+              required
+            >
+              <option value="">Select a doctor</option>
+              <option value="Dr. Ram">Dr. Ram</option>
+              <option value="Dr. Santhosh">Dr. Santhosh</option>
+              <option value="Dr. Robert">Dr. Robert</option>
+            </select>
+            <ion-icon
+              class="modal-input-dropdown"
+              name="caret-down-outline"
+            ></ion-icon>
+          </div>
+          <div class="book-modal-elements">
+            <label for="hospital-name"
+              ><ion-icon name="location"></ion-icon
+            ></label>
+
+            <select
+              id="book-hospital-name-input"
+              name="hospital-name"
+              title="hospital"
+              required
+            >
+              <option value="">Select a hospital</option>
+              <option value="Central Hospital">Central Hospital</option>
+              <option value="General Hospital">General Hospital</option>
+              <option value="St. Mary's Medical Center">
+                St. Mary's Medical Center
+              </option>
+            </select>
+            <ion-icon
+              class="modal-input-dropdown"
+              name="caret-down-outline"
+            ></ion-icon>
+          </div>
+          <div class="book-modal-elements">
+            <label for="specialty"
+              ><ion-icon name="fitness-outline"></ion-icon
+            ></label>
+            <select
+              id="book-specialty-input"
+              name="specialty"
+              title="specialty"
+              required
+            >
+              <option value="">Select a specialty</option>
+              <option value="Cardiology">Cardiology</option>
+              <option value="Dermatology">Dermatology</option>
+              <option value="Neurology">Neurology</option>
+              <option value="Pediatrics">Pediatrics</option>
+              <option value="Psychiatry">Psychiatry</option>
+              <option value="Oncology">Oncology</option>
+            </select>
+            <ion-icon
+              class="modal-input-dropdown"
+              name="caret-down-outline"
+            ></ion-icon>
+          </div>
+          <div class="book-modal-elements">
+            <label for="date"
+              ><ion-icon name="calendar-clear"></ion-icon
+            ></label>
+            <input
+              title="booking date"
+              type="date"
+              id="book-date-input"
+              name="date"
+              required
+              min=""
+            />
+            <!-- <label></label> -->
+          </div>
+          <div class="book-modal-elements">
+            <label for="time"><ion-icon name="time-outline"></ion-icon></label>
+            <input
+              type="time"
+              id="book-time-input"
+              name="time"
+              title="booking time"
+            />
+          </div>
+          <div class="book-modal-elements-rsn">
+            <label for="reason">Reason</label>
+            <textarea
+              type="text"
+              id="book-reason-input"
+              name="reason"
+              placeholder=""
+              required
+              title="appointment reason"
+            ></textarea>
+          </div>
+          <div class="submit-section modal-submit-section-border">
+            <a class="modal-cancel-btn">Cancel</a>
+            <button type="submit">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <header>
+      <div class="logo-h1">
+        <img src="img/logo.png" alt="Capminds Logo" />
+        <h1>Capminds</h1>
+      </div>
+      <a class="book-btn">
+        <ion-icon class="book-icon" name="add"></ion-icon>
+        <!-- <ion-icon name="add-outline"></ion-icon> -->
+        <p>Book Appointment</p>
+      </a>
+    </header>
+    <div class="nav-main-div">
+      <nav class="nav">
+        <a class="nav-icon">
+          <ion-icon name="chevron-back-circle-outline"></ion-icon>
+        </a>
+        <!-- <img
+        class="nav-icon"
+        src="img/material-symbols_navigate-next.png"
+        alt=""
+        /> -->
+        <a class="nav-items nav-cal nav-items-active"
+          ><ion-icon name="calendar-clear-outline"></ion-icon>
+          <p>Calendar</p>
+        </a>
+        <a class="nav-items nav-dash">
+          <ion-icon name="podium-outline"></ion-icon>
+          <p>Dashboard</p>
+        </a>
+      </nav>
+      <main>
+        <div class="practice-dash display-none">
+          <div class="practice-dash-h3">
+            <h3>Practice Dashboard</h3>
+          </div>
+          <div class="practice-dash-filter">
+            <div class="practice-filter-element">
+              <input
+                class="filter-patient-input"
+                type="text"
+                placeholder="Patient Search"
+              />
+              <ion-icon name="search-outline"></ion-icon>
+            </div>
+            <div class="practice-filter-element">
+              <input
+                class="filter-doctor-input"
+                type="text"
+                placeholder="Doctor Search"
+              />
+              <ion-icon name="search-outline"></ion-icon>
+            </div>
+            <div class="practice-filter-element">
+              <input type="date" placeholder="Select Date" class="start-date" />
+              <ion-icon name="calendar-clear-outline"></ion-icon>
+            </div>
+            <span>_</span>
+            <div class="practice-filter-element">
+              <input type="date" placeholder="Select Date" class="end-date" />
+              <ion-icon name="calendar-clear-outline"></ion-icon>
+            </div>
+            <a class="practice-dash-btn">Update</a>
+            <a class="practice-dash-btn practice-dash-btn-clear">Clear</a>
+          </div>
+          <div class="practice-dash-table">
+            <h5>Appointment Details</h5>
+            <div class="practice-dash-title">
+              <p>Patient</p>
+              <p>Doctor</p>
+              <p>Hospital</p>
+              <p>Specialty</p>
+              <p>Select Date</p>
+              <p>Select Time</p>
+              <p>Actions</p>
+            </div>
+            <div class="practice-dash-items"></div>
+          </div>
+        </div>
+        <div class="main-div">
+          <div class="date-select">
+            <div class="cal-btns">
+              <a><ion-icon name="chevron-back-outline"></ion-icon></a>
+              <div>
+                <div class="date-select-p">
+                  <ion-icon name="calendar-clear-outline"></ion-icon>
+                  <!-- <p class="date-select-p">January 18, 2023</p> -->
+                  <p>January 18, 2023</p>
+                </div>
+              </div>
+              <a><ion-icon name="chevron-forward-outline"></ion-icon></a>
+            </div>
+            <a class="date-select-today"><p>Today</p></a>
+            <label
+              class="date-select-drop"
+              for="month-select"
+              title="month select"
+            >
+              <!-- <label for="pet-select"> -->
+              <select
+                class="date-select-dropdown"
+                name="months"
+                id="month-select"
+              >
+                <option value="">Month</option>
+                <!-- <option value="January">January</option> -->
+              </select>
+              <ion-icon name="chevron-down-outline"></ion-icon>
+            </label>
+          </div>
+          <div class="div-doc">
+            <p class="doc-p blue-text">James Marry</p>
+          </div>
+          <div class="calender">
+            <div class="days">
+              <p>SUNDAY</p>
+              <p>MONDAY</p>
+              <p>TUESDAY</p>
+              <p>WEDNESDAY</p>
+              <p>THURSDAY</p>
+              <p>FRIDAY</p>
+              <p>SATURDAY</p>
+            </div>
+            <ul class="dates"></ul>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script defer src="index.js"></script>
+  </body>
+</html>
